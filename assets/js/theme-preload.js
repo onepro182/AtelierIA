@@ -1,0 +1,1 @@
+try{var q=new URLSearchParams(location.search).get('theme');var s=JSON.parse(localStorage.getItem('atelierIA.progress.v1')||'{}');var t=q||s.theme||'orange';if(t==='light')t='orange';if(t==='dark')t='night';if(t==='default')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',t);}catch(e){}

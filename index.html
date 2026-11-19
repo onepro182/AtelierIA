@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr" data-theme="orange">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fe630b">
+  <title>Atelier IA — Apprendre par la pratique</title>
+<link rel="stylesheet" href="assets/css/style.css?v=20261119-outils-icons">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'self' https://chatgpt.com; connect-src 'self'; frame-ancestors 'none'">
+  <script src="assets/js/theme-preload.js"></script>
+  <script defer src="data/courses.js?v=20261155"></script>
+  <script defer src="data/secret-codes.js?v=20261022"></script>
+  <script defer src="data/comprendre-ia.js?v=20261119c"></script>
+  <script defer src="data/types-ia.js?v=20261119"></script>
+  <script defer src="data/enjeux-impacts.js?v=20261119-ei-maroc"></script>
+  <script defer src="data/outils-ia.js?v=20261119-outils-icons"></script>
+  <script defer src="assets/js/app.js?v=20261119-outils-icons"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" id="brandReload" href="#accueil" aria-label="Atelier IA, accueil — recharger la page" title="Recharger la page (Ctrl+Shift+R)">
+        <span class="side-logo brand-logo" aria-hidden="true"><span class="side-logo-ring"></span><span class="side-logo-core">IA</span></span>
+        <span><strong>Atelier IA</strong><small>Apprendre en pratiquant</small></span>
+      </a>
+      <div class="side-label">ESPACE APPRENTISSAGE</div>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#accueil" data-route="accueil" class="nav-link active"><span>⌂</span> Accueil</a>
+        <a href="#comprendre-ia" data-route="comprendre-ia" class="nav-link"><span>◎</span> Comprendre l’IA</a>
+        <a href="#types-ia" data-route="types-ia" class="nav-link"><span>❖</span> Types d’IA</a>
+        <a href="#enjeux-impacts" data-route="enjeux-impacts" class="nav-link"><span>⚖</span> Enjeux et impacts</a>
+        <a href="#prerequis" data-route="prerequis" class="nav-link"><span>☁</span> Prérequis</a>
+        <a href="#outils-ia" data-route="outils-ia" class="nav-link"><span>✧</span> Outils IA</a>
+        <a href="#simulateurs" data-route="simulateurs" class="nav-link nav-parent"><span>⌘</span> LABORATOIRE INTERACTIF</a>
+        <div class="sub-nav" id="labSubnav">
+          <a href="#decouvrir-ia" data-route="decouvrir-ia" class="nav-link sub-link" style="display:none"><span>◧</span> Découvrir l'IA</a>
+          <a href="#creer-outil" data-route="creer-outil" class="nav-link sub-link"><span>✎</span> Créer un outil</a>
+          <a href="#verification-securite" data-route="verification-securite" class="nav-link sub-link"><span>☑</span> Vérification et sécurité</a>
+          <a href="#prompts" data-route="prompts" class="nav-link sub-link"><span>✳</span> Bibliothèque de prompts</a>
+          <a href="#codes-secrets" data-route="codes-secrets" class="nav-link sub-link"><span>✦</span> Codes Secrets</a>
+          <a href="#glossaire" data-route="glossaire" class="nav-link sub-link"><span>▦</span> Glossaire</a>
+        </div>
+        <a href="#parametres" data-route="parametres" class="nav-link"><span>⚙</span> Paramètres</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="local-note"><span class="status-dot"></span> Mode local · données sur cet appareil</div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+        <div class="breadcrumb" id="breadcrumb">Accueil</div>
+        <div class="top-actions"><span class="clock" id="clock"><svg class="clock-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.2" fill="var(--flip-hi,#f7f3ec)" stroke="var(--flip-bd,#e2dccf)" stroke-width="1.2"/><line x1="12" y1="12" x2="6.6" y2="9" stroke="var(--flip-dig,#211d1a)" stroke-width="1.7" stroke-linecap="round"/><line x1="12" y1="12" x2="18.8" y2="6.4" stroke="var(--flip-dig,#211d1a)" stroke-width="1.3" stroke-linecap="round"/><line x1="12" y1="12" x2="12" y2="5" stroke="var(--flip-col,#fe630b)" stroke-width="0.8" stroke-linecap="round"/><circle cx="12" cy="12" r="1" fill="var(--flip-col,#fe630b)"/></svg><span class="flip"><i id="d0">0</i></span><span class="flip"><i id="d1">0</i></span><span class="colon">:</span><span class="flip"><i id="d2">0</i></span><span class="flip"><i id="d3">0</i></span><span class="colon">:</span><span class="flip"><i id="d4">0</i></span><span class="flip"><i id="d5">0</i></span></span></div>
+      </header>
+      <div id="app" class="page-content" tabindex="-1" aria-live="polite"></div>
+      <footer class="footer">Atelier IA <span>•</span> Application pédagogique locale. Les simulateurs sont des démonstrations, pas des modèles d’IA réels.</footer>
+    </main>
+  </div>
+  <dialog id="modal" class="modal"><div id="modalContent"></div><form method="dialog"><button class="btn btn-secondary">Fermer</button></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
