@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const LAB_ROUTES = ["simulateurs","decouvrir-ia","creer-outil","developper-app","verification-securite","prompts","codes-secrets","glossaire"];
+  const LAB_ROUTES = ["simulateurs","prerequis","decouvrir-ia","creer-outil","developper-app","verification-securite","prompts","codes-secrets","glossaire"];
   let labSubnavOpen = false;
   function syncLabSubnav(){const sub=document.getElementById("labSubnav");if(sub)sub.classList.toggle("open",labSubnavOpen);}
   const STORAGE_KEY = "atelierIA.progress.v1";
