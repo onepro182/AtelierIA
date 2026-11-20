@@ -816,9 +816,9 @@ body .page-content .hero .hero-author span{color:#c8e6d8}
 /* Parcours « Comprendre l’IA » / « Types d’IA » : cartes #dce9ee */
 .prerequis-page.wiki-page .guide-content .glossary-card{background:#dce9ee}
 
-/* « Comprendre l’IA » : titre collé sous la barre du haut, sans espace au-dessus */
-.page-content.sim-frame:has(> .comprendre-ia-page){padding-top:0}
-.page-content.sim-frame > .comprendre-ia-page h1.page-title{margin-top:0}
+/* Titres collés sous la barre du haut, sans espace au-dessus (toutes les pages concernées) */
+.page-content.sim-frame{padding-top:0}
+.page-content.sim-frame h1.page-title{margin-top:0}
 
 /* Outils IA : catalogue des catégories importées */
 .outils-ia-page .glossary-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
