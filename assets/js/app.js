@@ -24,6 +24,41 @@
     "les-artefacts-en-ia":'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM4 7.5l8 4.5 8-4.5M12 12v9"/></svg>',
     "les-skills-en-ia":'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>'
   };
+  const svg3 = d => `<svg viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;
+  Object.assign(ARTICLE_3D_SVG, {
+    /* Types d’IA */
+    "ia-generative":svg3('<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3zM19 17l.7 2.3L22 20l-2.3.7L19 23l-.7-2.3L16 20l2.3-.7L19 17z"/>'),
+    "machine-learning":svg3('<path d="M3 20h18M6 20v-6M11 20V9M16 20v-4M21 20V6"/>'),
+    "deep-learning":svg3('<circle cx="5" cy="6" r="1.5"/><circle cx="5" cy="18" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="6" r="1.5"/><circle cx="19" cy="18" r="1.5"/><path d="M6.5 6.8l4 4M6.5 17.2l4-4M13.5 10.8l4-4M13.5 13.2l4 4"/>'),
+    "computer-vision":svg3('<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="3"/>'),
+    "ia-conversationnelle":svg3('<path d="M20 15a3 3 0 0 1-3 3H9l-5 3v-6a3 3 0 0 1-1-2V7a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v8z"/><path d="M8 10h8M8 13h5"/>'),
+    "ia-predictive":svg3('<circle cx="12" cy="10" r="6"/><path d="M9 15l-1 6h8l-1-6M12 10l2-2M12 10l-2 2"/>'),
+    "agents-ia":svg3('<circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 20c0-3 2-5 5-5s5 2 5 5M12 20c0-3 2-5 5-5s5 2 5 5M7 18l3 3 3-3"/>'),
+    "ia-multimodale":svg3('<rect x="3" y="4" width="12" height="12" rx="2"/><circle cx="17" cy="16" r="5"/><path d="M7 8h4M7 12h4"/>'),
+    /* Enjeux et impacts */
+    "opportunites-et-limites":svg3('<path d="M12 3v18M4 7h16M4 7l-3 7h6L4 7zM20 7l-3 7h6l-3-7zM8 21h8"/>'),
+    "ethique-ia":svg3('<circle cx="12" cy="12" r="9"/><path d="M15 9l-2 4-4 2 2-4 4-2z"/>'),
+    "reglementation-ia-act":svg3('<path d="M6 3h9l4 4v14H6zM15 3v5h4M9 12h7M9 16h7"/>'),
+    "droit-du-travail-maroc":svg3('<path d="M3 6h18v12H3z"/><path d="M12 8l1 2 2 .3-1.5 1.4.4 2.1L12 12.8l-1.9 1 .4-2.1L9 10.3l2-.3 1-2zM6 16h12"/>'),
+    "droits-auteurs-ia":svg3('<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a4 4 0 1 0 0 5"/>'),
+    "impact-emploi":svg3('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"/>'),
+    "impacts-societaux":svg3('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'),
+    "impacts-environnementaux":svg3('<path d="M20 4C10 4 4 9 4 16c0 2 1 4 1 4s8-1 12-6c3-4 3-10 3-10zM5 20c3-5 7-8 12-10"/>'),
+    "ia-et-eco-conception":svg3('<path d="M12 3l4 6h-8l4-6zM19 15l-4 6-4-6h8zM5 15l4-6 4 6H5z"/>'),
+    "ia-et-souverainete-etats-geopolitique-et-autonomie-strategique":svg3('<path d="M12 3l8 3v6c0 5-4 8-8 10-4-2-8-5-8-10V6l8-3zM9 12l2 2 4-4"/>'),
+    "le-travail-fantome-de-lia-les-petites-mains-derriere-la-machine":svg3('<path d="M9 12V5a1.5 1.5 0 0 1 3 0v5M12 10V4a1.5 1.5 0 0 1 3 0v6M15 10V6a1.5 1.5 0 0 1 3 0v8c0 5-3 7-7 7H8c-2 0-4-1.5-4-4l4-5h1z"/>'),
+    /* Outils IA */
+    "chatbots":svg3('<path d="M20 15a3 3 0 0 1-3 3H9l-5 3v-6a3 3 0 0 1-1-2V7a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v8z"/><path d="M8 10h8M8 13h5"/>'),
+    "generation-texte":svg3('<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h6M8 17h4"/>'),
+    "generation-images":svg3('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/>'),
+    "generation-video":svg3('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z"/>'),
+    "generation-audio":svg3('<path d="M4 14v-2a8 8 0 0 1 16 0v2M4 14h3v6H5a1 1 0 0 1-1-1v-5zM20 14h-3v6h2a1 1 0 0 0 1-1v-5z"/>'),
+    "productivite":svg3('<path d="M13 3L5 14h6l-1 7 8-11h-6l1-7z"/>'),
+    "developpement":svg3('<path d="M9 7l-5 5 5 5M15 7l5 5-5 5M13 5l-2 14"/>'),
+    "marketing":svg3('<path d="M4 10v4l12 5V5L4 10zM16 9l4-2v10l-4-2M7 14v5h3v-4"/>'),
+    "design":svg3('<path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 0-4h-1a2 2 0 0 1 0-4h3a4 4 0 0 0 4-4c0-3.3-4-6-8-6zM8 8h.01M12 7h.01M16 9h.01"/>'),
+    "formation":svg3('<path d="M2 9l10-5 10 5-10 5L2 9zM6 11v5c0 2 3 4 6 4s6-2 6-4v-5M22 9v6"/>')
+  });
   const defaults = () => ({completed:[], quizBest:0, quizLast:null, quizAnswers:{}, notes:{}, favorites:[], theme:"orange", learnerName:"Apprenant", lastRoute:"accueil", simulatorRuns:0, customPrompts:[]});
   const queryTheme = (()=>{try{const q=new URLSearchParams(location.search).get("theme");if(!q)return null;if(q==="default")return null;if(q==="light")return "orange";if(q==="dark")return "night";return ["default","orange","night","blue","smartdoc"].includes(q)?q:null;}catch(e){return null;}})();
   let state = loadState();
@@ -132,8 +167,8 @@
     return `<section class="prerequis-page wiki-page${cfg.pageClass?" "+cfg.pageClass:""}"><h1 class="page-title wiki-page-title">${esc(cfg.menuTitle)}</h1><p class="subheading">${esc((cfg.data()||{}).subtitle||"")}</p><div class="sim-page"><div class="guide-wrap" id="wikiGuide"><aside class="guide-sidebar"><h3><span class="guide-icon">✦</span> Sommaire</h3><input type="text" class="guide-search" id="wikiSearch" placeholder="Rechercher un article..." value="${esc(q)}" aria-label="Rechercher un article"><ul class="guide-nav" id="wikiNav">${nav}</ul><div class="guide-empty" id="wikiNavEmpty" hidden>Aucun article.</div></aside><div class="guide-content" id="wikiContent">${content}</div></div></div></section>`;
   }
   function comprendreIA(){return wikiSection({menuTitle:"Comprendre l’IA",eyebrow:"COMPRENDRE L’IA",pageClass:"comprendre-ia-page",badgeIcons:true,hash:"comprendre-ia",data:()=>window.COMPRENDRE_IA,getChapter:()=>ciChapter,icons3d:true,intro:"Les bases de l’intelligence artificielle en 7 articles : définition, histoire, concepts clés, glossaire, connecteurs, artéfacts et Skills. Chaque article est intégré à l’application, consultable hors connexion, avec des liens croisés d’un article à l’autre."});}
-  function typesIA(){return wikiSection({menuTitle:"Types d’IA",eyebrow:"TYPES D’IA",hash:"types-ia",data:()=>window.TYPES_IA,getChapter:()=>tiChapter,icons3d:true,intro:"Les grandes familles d’intelligence artificielle en 8 articles : IA générative, Machine Learning, Deep Learning, Computer Vision, IA conversationnelle, IA prédictive, Agents IA et IA multimodale. Chaque article est intégré à l’application, consultable hors connexion, avec des liens croisés d’un article à l’autre."});}
-  function enjeuxImpacts(){return wikiSection({menuTitle:"Enjeux et impacts",eyebrow:"ENJEUX ET IMPACTS",hash:"enjeux-impacts",data:()=>window.ENJEUX_IMPACTS,getChapter:()=>eiChapter,icons3d:true,intro:"Éthique, société, emploi, environnement et cadre juridique : 11 articles intégrés à l’application, consultables hors connexion, avec des liens croisés d’un article à l’autre."});}
+  function typesIA(){return wikiSection({menuTitle:"Types d’IA",eyebrow:"TYPES D’IA",badgeIcons:true,hash:"types-ia",data:()=>window.TYPES_IA,getChapter:()=>tiChapter,icons3d:true,intro:"Les grandes familles d’intelligence artificielle en 8 articles : IA générative, Machine Learning, Deep Learning, Computer Vision, IA conversationnelle, IA prédictive, Agents IA et IA multimodale. Chaque article est intégré à l’application, consultable hors connexion, avec des liens croisés d’un article à l’autre."});}
+  function enjeuxImpacts(){return wikiSection({menuTitle:"Enjeux et impacts",eyebrow:"ENJEUX ET IMPACTS",badgeIcons:true,hash:"enjeux-impacts",data:()=>window.ENJEUX_IMPACTS,getChapter:()=>eiChapter,icons3d:true,intro:"Éthique, société, emploi, environnement et cadre juridique : 11 articles intégrés à l’application, consultables hors connexion, avec des liens croisés d’un article à l’autre."});}
   function outilsIA(){
     header("Outils IA");
     const data=window.OUTILS_IA||{subtitle:"",categories:[]};
@@ -145,7 +180,7 @@
     const nav=`<li class="nav-all" data-oi-search=""><a href="#" data-oi-nav="all" class="${active?"":"active"}">◫ Toutes les catégories <span class="gnum">${cats.length}</span></a></li>`+cats.map(c=>`<li data-oi-search="${esc(searchText(c))}"><a href="#" data-oi-nav="${esc(c.slug)}" class="${active&&active.slug===c.slug?"active":""}"><span class="gnum">${esc(c.num)}</span><span class="gterm">${esc(c.title)}</span><span class="gnum">${Number(c.count)||0}</span></a></li>`).join("");
     let content;
     if(!active){
-      const cards=cats.map(c=>`<article class="glossary-card oi-card article-card-3d" data-oi-nav="${esc(c.slug)}" data-term-search="${esc(searchText(c))}"><div class="oi-card-banner" style="background:${esc(c.color||"#dce9ee")}"><span class="article-3d-icon oi-card-icon" aria-hidden="true">${esc(c.icon||"🧰")}</span><span class="oi-count">${Number(c.count)||0} outils</span><h3>${esc(c.title)}</h3></div><p>${esc(c.tagline)}</p><span class="code-more">Voir la catégorie →</span></article>`).join("");
+      const cards=cats.map(c=>`<article class="glossary-card oi-card article-card-3d" data-oi-nav="${esc(c.slug)}" data-term-search="${esc(searchText(c))}"><div class="oi-card-banner" style="background:${esc(c.color||"#dce9ee")}"><span class="article-3d-icon article-3d-badge oi-card-icon" aria-hidden="true">${ARTICLE_3D_SVG[c.slug]||ARTICLE_3D_SVG["les-artefacts-en-ia"]}</span><span class="oi-count">${Number(c.count)||0} outils</span><h3>${esc(c.title)}</h3></div><p>${esc(c.tagline)}</p><span class="code-more">Voir la catégorie →</span></article>`).join("");
       content=`<h2>Toutes les catégories</h2><p>${cats.length} familles d’usage · ${total} outils recensés dans la source. Cliquez sur une catégorie du sommaire ou sur une carte pour afficher son aperçu.</p><div class="glossary-cards oi-grid">${cards}</div><div class="guide-empty" id="oiEmpty" hidden>Aucune catégorie ne correspond à votre recherche.</div>`;
     }else{
       const idx=cats.findIndex(c=>c.slug===active.slug);
@@ -156,7 +191,7 @@
         const links=t.siteUrl?`<a class="btn btn-primary btn-small" href="${esc(t.siteUrl)}" target="_blank" rel="noopener">Site officiel ↗</a>`:"";
         return `<article class="glossary-card oi-tool-card" data-term-search="${esc((t.name+" "+t.desc+" "+t.meta).toLowerCase())}"><div class="oi-tool-top"><span class="code-num">${esc(t.num)}</span><h3>${esc(t.name)}</h3>${flags}</div><p>${esc(t.desc)}</p><p class="oi-tool-meta">${esc(t.meta)}</p>${links?`<div class="guide-actions">${links}</div>`:""}</article>`;
       }).join("");
-      content=`<button type="button" class="guide-back" data-oi-nav="all">← Retour aux catégories</button><h2><span class="code-num">${esc(active.num)}</span> <span class="article-3d-icon oi-detail-icon" aria-hidden="true">${esc(active.icon||"🧰")}</span> <span>${esc(active.title)}</span></h2><p class="code-tagline">${esc(active.sourceTitle||active.tagline)}</p><p>${tools.length} outils · ${esc(active.tagline)} · ${active.sourceHref?"Données importées localement depuis wiikiiaii.com.":"Catégorie ajoutée localement, consultable hors connexion."}</p><div class="glossary-cards oi-tools">${toolCards}</div><div class="guide-empty" id="oiToolsEmpty" hidden>Aucun outil ne correspond à votre recherche.</div><div class="ci-pager">${prev?`<button type="button" class="btn btn-secondary" data-oi-nav="${esc(prev.slug)}">← ${esc(prev.title)}</button>`:"<span></span>"}${next?`<button type="button" class="btn btn-primary" data-oi-nav="${esc(next.slug)}">${esc(next.title)} →</button>`:`<button type="button" class="btn btn-secondary" data-oi-nav="all">Terminer · Toutes les catégories</button>`}</div>`;
+      content=`<button type="button" class="guide-back" data-oi-nav="all">← Retour aux catégories</button><h2><span class="code-num">${esc(active.num)}</span> <span class="article-3d-icon article-3d-badge oi-detail-icon" aria-hidden="true">${ARTICLE_3D_SVG[active.slug]||ARTICLE_3D_SVG["les-artefacts-en-ia"]}</span> <span>${esc(active.title)}</span></h2><p class="code-tagline">${esc(active.sourceTitle||active.tagline)}</p><p>${tools.length} outils · ${esc(active.tagline)} · ${active.sourceHref?"Données importées localement depuis wiikiiaii.com.":"Catégorie ajoutée localement, consultable hors connexion."}</p><div class="glossary-cards oi-tools">${toolCards}</div><div class="guide-empty" id="oiToolsEmpty" hidden>Aucun outil ne correspond à votre recherche.</div><div class="ci-pager">${prev?`<button type="button" class="btn btn-secondary" data-oi-nav="${esc(prev.slug)}">← ${esc(prev.title)}</button>`:"<span></span>"}${next?`<button type="button" class="btn btn-primary" data-oi-nav="${esc(next.slug)}">${esc(next.title)} →</button>`:`<button type="button" class="btn btn-secondary" data-oi-nav="all">Terminer · Toutes les catégories</button>`}</div>`;
     }
     return `<section class="prerequis-page wiki-page outils-ia-page"><h1 class="page-title">Outils IA</h1><p class="subheading">${esc(data.subtitle||"")}</p><div class="sim-page"><div class="guide-wrap" id="oiGuide"><aside class="guide-sidebar"><h3><span class="guide-icon">✦</span> Sommaire</h3><input type="text" class="guide-search" id="oiSearch" placeholder="Rechercher un outil ou une catégorie..." value="${esc(q)}" aria-label="Rechercher un outil ou une catégorie"><ul class="guide-nav" id="oiNav">${nav}</ul><div class="guide-empty" id="oiNavEmpty" hidden>Aucune catégorie.</div></aside><div class="guide-content" id="oiContent">${content}</div></div></div></section>`;
   }
