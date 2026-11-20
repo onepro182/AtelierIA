@@ -15,6 +15,15 @@
     "ia-et-souverainete-etats-geopolitique-et-autonomie-strategique":"🛡️",
     "le-travail-fantome-de-lia-les-petites-mains-derriere-la-machine":"🧵"
   };
+  const ARTICLE_3D_SVG = {
+    "quest-ce-que-lia":'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="4"/><path d="M12 3v4M9 12.5h.01M15 12.5h.01M9 16.5c2 1.4 4 1.4 6 0"/></svg>',
+    "histoire-de-lia":'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3.5 2"/></svg>',
+    "les-concepts-cles":'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h8M7.7 7.6l3.2 8.5M16.5 8.7l-3.4 7.4"/></svg>',
+    "glossaire":'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-1.4-4.5-2-7-1.5V19c2.5-.5 5 .1 7 1.5 2-1.4 4.5-2 7-1.5V4.5C16.5 4 14 4.6 12 6zM12 6v14.5"/></svg>',
+    "les-connecteurs-en-ia":'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 14.5l5-5M7 12l-1.5 1.5a3.5 3.5 0 0 0 5 5L12 17M17 12l1.5-1.5a3.5 3.5 0 0 0-5-5L12 7"/></svg>',
+    "les-artefacts-en-ia":'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM4 7.5l8 4.5 8-4.5M12 12v9"/></svg>',
+    "les-skills-en-ia":'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>'
+  };
   const defaults = () => ({completed:[], quizBest:0, quizLast:null, quizAnswers:{}, notes:{}, favorites:[], theme:"orange", learnerName:"Apprenant", lastRoute:"accueil", simulatorRuns:0, customPrompts:[]});
   const queryTheme = (()=>{try{const q=new URLSearchParams(location.search).get("theme");if(!q)return null;if(q==="default")return null;if(q==="light")return "orange";if(q==="dark")return "night";return ["default","orange","night","blue","smartdoc"].includes(q)?q:null;}catch(e){return null;}})();
   let state = loadState();
@@ -111,7 +120,7 @@
     let content;
     if(!active){
       const cards=chapters.map(c=>{
-        const icon=cfg.icons3d&&ARTICLE_3D_ICONS[c.slug]?`<span class="article-3d-icon" aria-hidden="true">${ARTICLE_3D_ICONS[c.slug]}</span>`:"";
+        const icon=cfg.icons3d&&ARTICLE_3D_ICONS[c.slug]?cfg.badgeIcons?`<span class="article-3d-icon article-3d-badge" aria-hidden="true">${ARTICLE_3D_SVG[c.slug]||ARTICLE_3D_SVG["les-concepts-cles"]}</span>`:`<span class="article-3d-icon" aria-hidden="true">${ARTICLE_3D_ICONS[c.slug]}</span>`:"";
         return `<article class="glossary-card${cfg.icons3d?" article-card-3d":""}" data-nav="${cfg.hash}:${c.slug}" data-term-search="${esc((c.title+" "+c.tagline).toLowerCase())}">${icon?`<div class="article-card-head">${icon}<div class="article-card-head-text"><span class="code-num">${String(c.num).padStart(2,"0")}</span><h3>${esc(c.title)}</h3></div></div>`:`<span class="code-num">${String(c.num).padStart(2,"0")}</span><h3>${esc(c.title)}</h3>`}<p>${esc(c.tagline)} · ≈ ${ciReadingTime(c.words)} min de lecture</p><span class="code-more">Lire l’article →</span></article>`;
       }).join("");
       content=`<h2>Tous les articles</h2><p>Cliquez sur un article du sommaire ou sur une carte pour lire l’article.</p><div class="glossary-cards">${cards}</div><div class="guide-empty" id="wikiEmpty" hidden>Aucun article ne correspond à votre recherche.</div>`;
@@ -122,7 +131,7 @@
     }
     return `<section class="prerequis-page wiki-page${cfg.pageClass?" "+cfg.pageClass:""}"><h1 class="page-title wiki-page-title">${esc(cfg.menuTitle)}</h1><p class="subheading">${esc((cfg.data()||{}).subtitle||"")}</p><div class="sim-page"><div class="guide-wrap" id="wikiGuide"><aside class="guide-sidebar"><h3><span class="guide-icon">✦</span> Sommaire</h3><input type="text" class="guide-search" id="wikiSearch" placeholder="Rechercher un article..." value="${esc(q)}" aria-label="Rechercher un article"><ul class="guide-nav" id="wikiNav">${nav}</ul><div class="guide-empty" id="wikiNavEmpty" hidden>Aucun article.</div></aside><div class="guide-content" id="wikiContent">${content}</div></div></div></section>`;
   }
-  function comprendreIA(){return wikiSection({menuTitle:"Comprendre l’IA",eyebrow:"COMPRENDRE L’IA",pageClass:"comprendre-ia-page",hash:"comprendre-ia",data:()=>window.COMPRENDRE_IA,getChapter:()=>ciChapter,icons3d:true,intro:"Les bases de l’intelligence artificielle en 7 articles : définition, histoire, concepts clés, glossaire, connecteurs, artéfacts et Skills. Chaque article est intégré à l’application, consultable hors connexion, avec des liens croisés d’un article à l’autre."});}
+  function comprendreIA(){return wikiSection({menuTitle:"Comprendre l’IA",eyebrow:"COMPRENDRE L’IA",pageClass:"comprendre-ia-page",badgeIcons:true,hash:"comprendre-ia",data:()=>window.COMPRENDRE_IA,getChapter:()=>ciChapter,icons3d:true,intro:"Les bases de l’intelligence artificielle en 7 articles : définition, histoire, concepts clés, glossaire, connecteurs, artéfacts et Skills. Chaque article est intégré à l’application, consultable hors connexion, avec des liens croisés d’un article à l’autre."});}
   function typesIA(){return wikiSection({menuTitle:"Types d’IA",eyebrow:"TYPES D’IA",hash:"types-ia",data:()=>window.TYPES_IA,getChapter:()=>tiChapter,icons3d:true,intro:"Les grandes familles d’intelligence artificielle en 8 articles : IA générative, Machine Learning, Deep Learning, Computer Vision, IA conversationnelle, IA prédictive, Agents IA et IA multimodale. Chaque article est intégré à l’application, consultable hors connexion, avec des liens croisés d’un article à l’autre."});}
   function enjeuxImpacts(){return wikiSection({menuTitle:"Enjeux et impacts",eyebrow:"ENJEUX ET IMPACTS",hash:"enjeux-impacts",data:()=>window.ENJEUX_IMPACTS,getChapter:()=>eiChapter,icons3d:true,intro:"Éthique, société, emploi, environnement et cadre juridique : 11 articles intégrés à l’application, consultables hors connexion, avec des liens croisés d’un article à l’autre."});}
   function outilsIA(){
