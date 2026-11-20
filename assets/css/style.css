@@ -490,6 +490,11 @@ html[data-theme="night"] .glossary-card:hover{box-shadow:0 6px 16px rgba(0,0,0,.
 }
 .article-3d-badge svg{display:block;width:27px;height:27px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
 .article-card-3d:hover .article-3d-badge{transform:perspective(160px) rotateX(0deg) rotateY(0deg) translateY(-2px);box-shadow:0 9px 16px rgba(14,120,113,.34),inset 0 2px 3px rgba(255,255,255,.6),inset 0 -3px 6px rgba(0,0,0,.16)}
+/* Couleurs propres à chaque parcours */
+.types-ia-page .article-3d-badge{background:linear-gradient(145deg,#7d7af0 0%,#5754e8 48%,#403dcc 100%);box-shadow:0 6px 12px rgba(87,84,232,.28),inset 0 2px 3px rgba(255,255,255,.55),inset 0 -3px 6px rgba(0,0,0,.16)}
+.types-ia-page .article-card-3d:hover .article-3d-badge{box-shadow:0 9px 16px rgba(87,84,232,.34),inset 0 2px 3px rgba(255,255,255,.6),inset 0 -3px 6px rgba(0,0,0,.16)}
+.enjeux-impacts-page .article-3d-badge{background:linear-gradient(145deg,#e39a46 0%,#bd6b13 48%,#8f4f07 100%);box-shadow:0 6px 12px rgba(189,107,19,.3),inset 0 2px 3px rgba(255,255,255,.55),inset 0 -3px 6px rgba(0,0,0,.16)}
+.enjeux-impacts-page .article-card-3d:hover .article-3d-badge{box-shadow:0 9px 16px rgba(189,107,19,.36),inset 0 2px 3px rgba(255,255,255,.6),inset 0 -3px 6px rgba(0,0,0,.16)}
 .article-card-3d .code-num{opacity:.85}
 .article-card-head .code-num{display:block;margin-bottom:2px}
 .filter-group{display:flex;flex-wrap:wrap;gap:8px}
