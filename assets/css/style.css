@@ -283,7 +283,7 @@ html[data-theme="night"] .verif-item{background:#1f2422;border-color:#2b302e}
 html[data-theme="night"] .verif-item.done{background:#29274c}
 .v-prog-row{display:flex;align-items:center;gap:14px}
 .verif-ico{margin-right:2px}
-.prerequis-page .guide-content h2{font:800 20px Manrope;letter-spacing:-.02em;margin:0 0 8px}
+.prerequis-page .guide-content h2,.glossary-page .guide-content h2{font:800 20px Manrope;letter-spacing:-.02em;margin:0 0 8px}
 .prerequis-page .guide-content .glossary-card{cursor:pointer}
 .prerequis-page .guide-content .glossary-card:hover{border-color:var(--primary);transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.07)}
 .guide-empty{padding:10px 16px;font-size:11px;color:var(--muted)}
