@@ -10,7 +10,7 @@
     "ia-generative":"✨","machine-learning":"📊","deep-learning":"🧠","computer-vision":"👁️",
     "ia-conversationnelle":"💬","ia-predictive":"🔮","agents-ia":"🤝","ia-multimodale":"🎭",
     "opportunites-et-limites":"⚖️","ethique-ia":"🧭","reglementation-ia-act":"📜",
-    "droit-du-travail-maroc":"🇲🇦","droits-auteurs-ia":"©️","impact-emploi":"💼",
+    "loi-09-08-cndp":"🔒","droits-auteurs-ia":"©️","impact-emploi":"💼",
     "impacts-societaux":"🌍","impacts-environnementaux":"🌱","ia-et-eco-conception":"♻️",
     "ia-et-souverainete-etats-geopolitique-et-autonomie-strategique":"🛡️",
     "le-travail-fantome-de-lia-les-petites-mains-derriere-la-machine":"🧵"
@@ -39,7 +39,7 @@
     "opportunites-et-limites":svg3('<path d="M12 3v18M4 7h16M4 7l-3 7h6L4 7zM20 7l-3 7h6l-3-7zM8 21h8"/>'),
     "ethique-ia":svg3('<circle cx="12" cy="12" r="9"/><path d="M15 9l-2 4-4 2 2-4 4-2z"/>'),
     "reglementation-ia-act":svg3('<path d="M6 3h9l4 4v14H6zM15 3v5h4M9 12h7M9 16h7"/>'),
-    "droit-du-travail-maroc":svg3('<path d="M3 6h18v12H3z"/><path d="M12 8l1 2 2 .3-1.5 1.4.4 2.1L12 12.8l-1.9 1 .4-2.1L9 10.3l2-.3 1-2zM6 16h12"/>'),
+    "loi-09-08-cndp":svg3('<rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>'),
     "droits-auteurs-ia":svg3('<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a4 4 0 1 0 0 5"/>'),
     "impact-emploi":svg3('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"/>'),
     "impacts-societaux":svg3('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'),
